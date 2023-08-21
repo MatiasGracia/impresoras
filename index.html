@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impresión y Diseño 3D</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Impresión y Diseño 3D</h1>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                ☰
+            </div>
+            <ul class="menu">
+                <li><a href="#" onclick="mostrarSeccion('home')">Home</a></li>
+                <li><a href="#" onclick="mostrarSeccion('ecommerce')">Productos Impresos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('design')">Diseño 3D</a></li>
+                <li><a href="#" onclick="mostrarSeccion('contact')">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="contenido">
+        <h2>Inicio</h2>
+        <h2>Bienvenido a Impresión y Diseño 3D</h2>
+        <p>Somos líderes en soluciones de impresión y diseño 3D. Nuestros servicios de vanguardia permiten a empresas y particulares dar vida a sus ideas.</p>
+        <p>Descubre nuestras ofertas especiales y las últimas noticias del mundo 3D en nuestro sitio web.</p>
+    </section>
+
+    <section id="ecommerce" class="contenido oculto">
+        <h2>Productos Impresos</h2>
+        <h2>Nuestros Productos</h2>
+        <p>Explora nuestra amplia gama de productos impresos en 3D. Desde piezas únicas hasta reproducciones detalladas, tenemos algo para todos.</p>
+        <!-- Aquí podrías agregar tarjetas de productos, imágenes y descripciones -->
+        
+        <div>
+            <h2>Filtro de Categoría</h2>
+            <select id="filtroCategoria">
+                <option value="todos">Todos</option>
+            </select>
+            <h2>Ordenar por</h2>
+            <select id="ordenarPrecio">
+                <option value="todos">Todos</option>
+                <option value="ascendente">Precio: Menor a Mayor</option>
+                <option value="descendente">Precio: Mayor a Menor</option>
+            </select>
+        </div>
+        <div id="areaProductos">
+            <!-- Las tarjetas de productos se generarán aquí -->
+        </div>
+    </section>
+
+    <section id="design" class="contenido oculto">
+        <div class="tarjeta">
+            <!-- Tarjeta de diseño de trabajo 3D -->
+            <img src="ruta_imagen" alt="Imagen de diseño">
+            <h3>Nombre del diseño</h3>
+            <p>Descripción del diseño</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contenido oculto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o quieres trabajar con nosotros? No dudes en contactarnos.</p>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2023 Impresión y Diseño 3D. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
