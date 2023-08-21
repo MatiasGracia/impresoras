@@ -51,11 +51,16 @@ function mostrarProductos(categoria = 'todos') {
 
     let htmlProductos = productosFiltrados.map(producto => {
         return `
-            <div class="producto">
-                <img src="${producto.imagen}" alt="${producto.nombre}">
-                <h3>${producto.nombre}</h3>
-                <p>${producto.descripcion}</p>
-                <p><strong>Precio: $${producto.precio}</strong></p>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                    <div class="card-body">
+                        <h5 class="card-title">${producto.nombre}</h5>
+                        <p class="card-text">${producto.descripcion}</p>
+                        <p class="card-text"><strong>Precio: $${producto.precio}</strong></p>
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
+                </div>
             </div>
         `;
     }).join('');
@@ -108,3 +113,5 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarProductos(filtroCategoria.value);  // Mostrar productos con el orden actual y el filtro aplicado
     });
 });
+
+mostrarSeccion('home');

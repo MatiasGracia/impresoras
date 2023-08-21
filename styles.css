@@ -80,17 +80,152 @@ footer {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    max-width: 300px; /* Ajusta el ancho de las tarjetas */
     text-align: center;
+    margin: 0 auto;  /* Centra las tarjetas horizontalmente */
 }
 
 .tarjeta img {
-    max-width: 100%;
+    max-width: 100px; /* Ajusta el ancho de las imágenes */
     height: auto;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: block;
 }
 
 .oculto {
     display: none;
+}
+
+#home {
+    background-color: #e0e0e0;  /* Fondo gris claro */
+}
+
+/* Carrusel */
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    margin-top: 30px;  /* Margen superior */
+    margin-bottom: 300px !important;  /* Margen inferior */
+}
+
+.carrusel > div {
+    
+    height: 200px;
+    transition: transform 0.5s;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Resúmenes de secciones */
+.resumen-seccion {
+    display: flex;
+    gap: 20px;
+}
+
+.resumen-seccion > div {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.resumen-seccion > div:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.resumen-seccion button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.resumen-seccion button:hover {
+    background-color: #555;
+}
+
+/* Sección e-commerce */
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.producto {
+    width: 200px;
+    /* ... (resto de estilos) ... */
+}
+
+/* Formulario de contacto */
+form {
+    display: grid;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label, form input, form textarea, form button {
+    width: 100%;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+
+.resumen-seccion {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.resumen-seccion > div {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    text-align: center;
+}
+
+.resumen-seccion button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-inner img {
+    height: 250px;  /* Ajusta este valor según prefieras */
+    object-fit: contain;  /* Cambia a 'contain' para que la imagen se ajuste completamente dentro del contenedor */
 }
 
 /* Estilos para dispositivos móviles */
